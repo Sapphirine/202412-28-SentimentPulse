@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Dashboard</title>
+</head>
+<body>
+    <h1>Sentiment Dashboard</h1>
+    <form id="news-form" method="GET" action="/news_plot" target="news-chart-frame">
+        <label for="start_time">Start Time:</label>
+        <input type="datetime-local" name="start_time" id="start_time" required>
+        <br><br>
+        <label for="end_time">End Time:</label>
+        <input type="datetime-local" name="end_time" id="end_time" required>
+        <br><br>
+        <label for="metric">Select Metric:</label>
+        <select name="metric" id="metric">
+            {% for metric in metrics %}
+            <option value="{{ metric }}">{{ metric.replace('_', ' ').title() }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <button type="submit">Generate News Chart</button>
+    </form>
+    <iframe id="news-chart-frame" name="news-chart-frame" style="width: 100%; height: 600px; border: none;"></iframe>
+    <hr>
+    <form id="tweet-form" method="GET" action="/tweet_plot" target="tweet-chart-frame">
+        <label for="start_time">Start Time:</label>
+        <input type="datetime-local" name="start_time" id="start_time" required>
+        <br><br>
+        <label for="end_time">End Time:</label>
+        <input type="datetime-local" name="end_time" id="end_time" required>
+        <br><br>
+        <label for="metric">Select Metric:</label>
+        <select name="metric" id="metric">
+            {% for metric in metrics %}
+            <option value="{{ metric }}">{{ metric.replace('_', ' ').title() }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <button type="submit">Generate Tweet Chart</button>
+    </form>
+    <iframe id="tweet-chart-frame" name="tweet-chart-frame" style="width: 100%; height: 600px; border: none;"></iframe>
+</body>
+</html>

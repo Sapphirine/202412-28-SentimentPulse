@@ -1,0 +1,5 @@
+flask
+flask-cors
+sqlalchemy
+cloud-sql-python-connector[pg8000]
+pg8000
