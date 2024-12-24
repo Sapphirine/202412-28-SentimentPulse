@@ -1,4 +1,5 @@
 # 202412-28-SentimentPulse
+- Video: https://www.youtube.com/watch?v=m2VxywzR5Ys
 Repository holding all the separate repos used for the project.
 Directories and their descriptions:
 - DAG: Code used to set up DAG using Airflow on Google Cloud Composer
@@ -8,3 +9,4 @@ Directories and their descriptions:
 
 Example UI:
 <img width="1044" alt="tweet_plot (1)" src="https://github.com/user-attachments/assets/cfcb7922-1de1-431f-ba14-5e2d1a30f5d2" />
+
